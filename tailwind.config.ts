@@ -64,15 +64,45 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				therapy: {
-					'light-blue': '#E0F7FA',
-					'calm-blue': '#4FC3F7',
-					'deep-blue': '#0288D1',
-					'soothing-green': '#81C784',
-					'soft-green': '#E8F5E9',
-					'tranquil-teal': '#4DB6AC',
-					'gentle-purple': '#B39DDB',
-					'warm-beige': '#F5F5DC',
-					'neutral': '#F5F7FA'
+					// Row 1 (Dark Blues / Purples)
+					'dark-blue': '#161534',
+					'navy': '#252466',
+					'purple': '#43439A',
+					
+					// Row 2 (Teals / Cyans)
+					'dark-teal': '#0C5E63',
+					'teal': '#147A8B',
+					'cyan': '#2FC0D0',
+					
+					// Row 3 (Golds / Oranges)
+					'dark-gold': '#A16A1D',
+					'gold': '#F2A12C',
+					'light-gold': '#E8B075',
+					
+					// Row 4 (Neutrals / Pinks)
+					'neutral': '#9A8A88',
+					'light-pink': '#FBDAD3',
+					'cream-pink': '#FFF6F4',
+					
+					// Row 5 (Purples / Pinks)
+					'magenta': '#964365',
+					'pink': '#ED7CA8',
+					'bright-pink': '#F278B0',
+					
+					// Row 6 (Beiges / Creams)
+					'beige': '#A17F5D',
+					'cream': '#FFD28B',
+					'light-cream': '#FED7A3',
+					
+					// Row 7 (Reds / Oranges)
+					'dark-red': '#A53011',
+					'orange': '#F0570D',
+					'coral': '#F28C67',
+					
+					// Row 8 (Purples / Lilacs)
+					'deep-purple': '#2D0D34',
+					'rich-purple': '#58206C',
+					'lilac': '#B997D6'
 				}
 			},
 			borderRadius: {

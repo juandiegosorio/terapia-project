@@ -40,13 +40,13 @@ const benefits = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-16 bg-therapy-neutral" id="how-it-works">
+    <section className="py-16 bg-therapy-cream-pink" id="how-it-works">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-therapy-dark-blue sm:text-4xl">
             How MindfulSession Works
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-therapy-deep-purple max-w-3xl mx-auto">
             Our streamlined workflow makes it easy to manage therapy sessions 
             while maintaining the highest standards of privacy and security.
           </p>
@@ -54,7 +54,7 @@ const HowItWorksSection = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-therapy-calm-blue/30 transform -translate-x-1/2"></div>
+          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-therapy-teal/30 transform -translate-x-1/2"></div>
           
           {/* Steps */}
           <div className="space-y-12">
@@ -64,14 +64,14 @@ const HowItWorksSection = () => {
                   <div className="flex-1 md:text-right md:pr-8 pb-4 md:pb-0 order-2 md:order-1">
                     {index % 2 === 0 ? (
                       <div className="md:ml-auto">
-                        <h3 className="text-xl font-bold text-therapy-deep-blue">{step.title}</h3>
-                        <p className="mt-2 text-gray-600">{step.description}</p>
+                        <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
+                        <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
                       </div>
                     ) : null}
                   </div>
                   
                   <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full bg-therapy-calm-blue text-white flex items-center justify-center font-bold z-10">
+                    <div className="w-8 h-8 rounded-full bg-therapy-teal text-white flex items-center justify-center font-bold z-10">
                       {index + 1}
                     </div>
                   </div>
@@ -79,8 +79,8 @@ const HowItWorksSection = () => {
                   <div className="flex-1 md:pl-8 pl-12 order-1 md:order-2">
                     {index % 2 === 1 ? (
                       <div>
-                        <h3 className="text-xl font-bold text-therapy-deep-blue">{step.title}</h3>
-                        <p className="mt-2 text-gray-600">{step.description}</p>
+                        <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
+                        <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
                       </div>
                     ) : null}
                   </div>
@@ -91,14 +91,14 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="mt-20 bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+          <h3 className="text-2xl font-bold text-center text-therapy-dark-blue mb-8">
             Benefits of Using MindfulSession
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-therapy-soothing-green flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">{benefit}</p>
+                <CheckCircle className="h-6 w-6 text-therapy-gold flex-shrink-0 mt-0.5" />
+                <p className="text-therapy-deep-purple">{benefit}</p>
               </div>
             ))}
           </div>

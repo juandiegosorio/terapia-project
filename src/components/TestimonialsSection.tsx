@@ -25,7 +25,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 therapy-gradient text-white">
+    <section className="py-16 bg-gradient-to-br from-therapy-dark-blue via-therapy-navy to-therapy-purple text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
                 <Quote className="h-8 w-8 opacity-50 mb-4" />
                 <p className="mb-6">{testimonial.content}</p>
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full overflow-hidden bg-therapy-deep-blue/30 flex items-center justify-center mr-4">
+                  <div className="h-12 w-12 rounded-full overflow-hidden bg-therapy-cyan/30 flex items-center justify-center mr-4">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author}

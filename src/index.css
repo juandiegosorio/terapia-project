@@ -5,39 +5,39 @@
 
 @layer base {
   :root {
-    --background: 195 33% 98%;
-    --foreground: 200 33% 18%;
+    --background: 20 40% 98%;
+    --foreground: 252 42% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 33% 18%;
+    --card-foreground: 252 42% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 33% 18%;
+    --popover-foreground: 252 42% 14%;
 
-    --primary: 196 73% 45%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 252 60% 43%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 152 63% 45%;
-    --secondary-foreground: 200 33% 18%;
+    --secondary: 187 75% 44%;
+    --secondary-foreground: 252 42% 14%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 264 59% 73%;
-    --accent-foreground: 200 33% 18%;
+    --accent: 288 32% 44%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 12 84% 36%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 196 73% 45%;
+    --ring: 187 75% 44%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 196 73% 45%;
+    --sidebar-primary: 252 60% 43%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
@@ -46,37 +46,37 @@
   }
 
   .dark {
-    --background: 200 33% 12%;
-    --foreground: 210 40% 98%;
+    --background: 252 42% 14%;
+    --foreground: 20 40% 98%;
 
-    --card: 200 33% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 252 42% 14%;
+    --card-foreground: 20 40% 98%;
 
-    --popover: 200 33% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 252 42% 14%;
+    --popover-foreground: 20 40% 98%;
 
-    --primary: 196 73% 45%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 252 60% 43%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 152 63% 45%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 187 75% 44%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 264 59% 73%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 288 32% 44%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 12 84% 36%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 196 73% 45%;
+    --ring: 187 75% 44%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 196 73% 45%;
+    --sidebar-primary: 252 60% 43%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -97,7 +97,7 @@
 
 @layer components {
   .therapy-gradient {
-    @apply bg-gradient-to-br from-therapy-calm-blue via-therapy-tranquil-teal to-therapy-soothing-green;
+    @apply bg-gradient-to-br from-therapy-dark-blue via-therapy-teal to-therapy-gold;
   }
   
   .therapy-card {
@@ -105,6 +105,6 @@
   }
   
   .therapy-input {
-    @apply bg-therapy-light-blue border-therapy-calm-blue focus:ring-therapy-deep-blue;
+    @apply bg-therapy-cream border-therapy-teal focus:ring-therapy-purple;
   }
 }

@@ -1,5 +1,6 @@
 
 import { CheckCircle } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -39,6 +40,8 @@ const benefits = [
 ];
 
 const HowItWorksSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="py-16 bg-therapy-cream-pink" id="how-it-works">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,38 +56,54 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-therapy-teal/30 transform -translate-x-1/2"></div>
+          {/* Timeline line - hide on mobile */}
+          {!isMobile && (
+            <div className="absolute left-1/2 h-full w-0.5 bg-therapy-teal/30 transform -translate-x-1/2"></div>
+          )}
           
           {/* Steps */}
           <div className="space-y-12">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="flex flex-col md:flex-row items-start md:items-center">
-                  <div className="flex-1 md:text-right md:pr-8 pb-4 md:pb-0 order-2 md:order-1">
-                    {index % 2 === 0 ? (
-                      <div className="md:ml-auto">
-                        <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
-                        <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
+                {isMobile ? (
+                  // Mobile layout
+                  <div className="flex flex-col">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 rounded-full bg-therapy-teal text-white flex items-center justify-center font-bold z-10 mr-3">
+                        {index + 1}
                       </div>
-                    ) : null}
+                      <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
+                    </div>
+                    <p className="text-therapy-deep-purple pl-11">{step.description}</p>
                   </div>
-                  
-                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full bg-therapy-teal text-white flex items-center justify-center font-bold z-10">
-                      {index + 1}
+                ) : (
+                  // Desktop layout
+                  <div className="flex flex-col md:flex-row items-start md:items-center">
+                    <div className="flex-1 md:text-right md:pr-8 pb-4 md:pb-0 order-2 md:order-1">
+                      {index % 2 === 0 ? (
+                        <div className="md:ml-auto">
+                          <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
+                          <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
+                        </div>
+                      ) : null}
+                    </div>
+                    
+                    <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-therapy-teal text-white flex items-center justify-center font-bold z-10">
+                        {index + 1}
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 md:pl-8 pl-12 order-1 md:order-2">
+                      {index % 2 === 1 ? (
+                        <div>
+                          <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
+                          <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
-                  
-                  <div className="flex-1 md:pl-8 pl-12 order-1 md:order-2">
-                    {index % 2 === 1 ? (
-                      <div>
-                        <h3 className="text-xl font-bold text-therapy-navy">{step.title}</h3>
-                        <p className="mt-2 text-therapy-deep-purple">{step.description}</p>
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
+                )}
               </div>
             ))}
           </div>

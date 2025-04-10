@@ -4,38 +4,38 @@ import { CheckCircle } from "lucide-react";
 const steps = [
   {
     number: "01",
-    title: "Record or Upload",
-    description: "Record therapy sessions directly or upload existing files securely to the platform."
+    title: "Grabar o Subir",
+    description: "Graba sesiones de terapia directamente o sube archivos existentes de forma segura a la plataforma."
   },
   {
     number: "02",
-    title: "Automatic Processing",
-    description: "Our system transcribes audio to text and runs AI analysis to detect emotions and extract key information."
+    title: "Procesamiento Automático",
+    description: "Nuestro sistema transcribe audio a texto y ejecuta análisis de IA para detectar emociones y extraer información clave."
   },
   {
     number: "03",
-    title: "Add Notes",
-    description: "Therapists can add personal notes and observations to each session for comprehensive care."
+    title: "Añadir Notas",
+    description: "Los terapeutas pueden añadir notas personales y observaciones a cada sesión para una atención integral."
   },
   {
     number: "04",
-    title: "Secure Storage",
-    description: "All session data is securely stored in your Google Drive with proper access controls."
+    title: "Almacenamiento Seguro",
+    description: "Todos los datos de la sesión se almacenan de forma segura en tu Google Drive con controles de acceso adecuados."
   },
   {
     number: "05",
-    title: "Patient Access",
-    description: "Patients receive notifications and can securely access only their own sessions."
+    title: "Acceso del Paciente",
+    description: "Los pacientes reciben notificaciones y pueden acceder de forma segura solo a sus propias sesiones."
   }
 ];
 
 const benefits = [
-  "Enhanced patient experience with transparent session access",
-  "Time savings through automatic transcription and analysis",
-  "Improved therapeutic insights with emotion detection",
-  "Secure data storage integrated with Google Drive",
-  "Streamlined patient management workflow",
-  "Better continuity of care between sessions"
+  "Experiencia mejorada del paciente con acceso transparente a las sesiones",
+  "Ahorro de tiempo a través de transcripción y análisis automáticos",
+  "Mejores insights terapéuticos con detección de emociones",
+  "Almacenamiento seguro de datos integrado con Google Drive",
+  "Flujo de trabajo optimizado para gestión de pacientes",
+  "Mejor continuidad de la atención entre sesiones"
 ];
 
 const HowItWorksSection = () => {
@@ -44,11 +44,11 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-therapy-dark-blue sm:text-4xl">
-            How MindfulSession Works
+            Cómo Funciona terapIA
           </h2>
           <p className="mt-4 text-lg text-therapy-deep-purple max-w-3xl mx-auto">
-            Our streamlined workflow makes it easy to manage therapy sessions 
-            while maintaining the highest standards of privacy and security.
+            Nuestro flujo de trabajo optimizado facilita la gestión de sesiones de terapia
+            manteniendo los más altos estándares de privacidad y seguridad.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
 
         <div className="mt-20 bg-white rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-center text-therapy-dark-blue mb-8">
-            Benefits of Using MindfulSession
+            Beneficios de Usar terapIA
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (

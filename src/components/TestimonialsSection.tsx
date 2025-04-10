@@ -4,21 +4,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    content: "MindfulSession has transformed my practice. The AI insights help me identify patterns I might have missed, and my patients appreciate having access to their session recordings.",
-    author: "Dr. Sarah Johnson",
-    title: "Clinical Psychologist",
+    content: "terapIA ha transformado mi práctica. Los análisis de IA me ayudan a identificar patrones que podría haber pasado por alto, y mis pacientes aprecian tener acceso a las grabaciones de sus sesiones.",
+    author: "Dra. Sara Jiménez",
+    title: "Psicóloga Clínica",
     image: "/placeholder.svg"
   },
   {
-    content: "As a therapist with a busy practice, the automatic transcription feature alone has saved me hours each week. The secure Google Drive integration gives me peace of mind about data security.",
-    author: "Dr. Michael Chen",
-    title: "Cognitive Behavioral Therapist",
+    content: "Como terapeuta con una práctica ocupada, la función de transcripción automática por sí sola me ha ahorrado horas cada semana. La integración segura con Google Drive me da tranquilidad sobre la seguridad de los datos.",
+    author: "Dr. Miguel Chen",
+    title: "Terapeuta Cognitivo Conductual",
     image: "/placeholder.svg"
   },
   {
-    content: "My patients love getting notifications when new sessions are available. The emotion analysis has been surprisingly accurate and helps guide my approach to subsequent sessions.",
-    author: "Emily Rodriguez, LMFT",
-    title: "Family Therapist",
+    content: "A mis pacientes les encanta recibir notificaciones cuando hay nuevas sesiones disponibles. El análisis de emociones ha sido sorprendentemente preciso y ayuda a guiar mi enfoque en las sesiones subsiguientes.",
+    author: "Elena Rodríguez, LMFT",
+    title: "Terapeuta Familiar",
     image: "/placeholder.svg"
   }
 ];
@@ -29,10 +29,10 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Trusted by Therapists
+            Confiado por Terapeutas
           </h2>
           <p className="mt-4 text-lg opacity-90 max-w-3xl mx-auto">
-            See what professionals are saying about MindfulSession
+            Mira lo que los profesionales están diciendo sobre terapIA
           </p>
         </div>
 

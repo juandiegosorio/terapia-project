@@ -18,9 +18,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
-            <h2 className="text-2xl font-semibold mb-4">MindfulSession</h2>
+            <h2 className="text-2xl font-semibold mb-4">terapIA</h2>
             <p className="text-therapy-light-pink mb-4">
-              Secure, AI-powered therapy session management for modern practices.
+              Gestión segura de sesiones de terapia impulsada por IA para prácticas modernas.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-therapy-light-pink hover:text-white transition">
@@ -39,22 +39,22 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-therapy-light-pink hover:text-white transition">Home</Link>
+                <Link to="/" className="text-therapy-light-pink hover:text-white transition">Inicio</Link>
               </li>
               <li>
-                <Link to="/features" className="text-therapy-light-pink hover:text-white transition">Features</Link>
+                <Link to="/features" className="text-therapy-light-pink hover:text-white transition">Características</Link>
               </li>
               <li>
-                <Link to="/about" className="text-therapy-light-pink hover:text-white transition">About Us</Link>
+                <Link to="/about" className="text-therapy-light-pink hover:text-white transition">Nosotros</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-therapy-light-pink hover:text-white transition">Contact</Link>
+                <Link to="/contact" className="text-therapy-light-pink hover:text-white transition">Contacto</Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-therapy-light-pink hover:text-white transition">Pricing</Link>
+                <Link to="/pricing" className="text-therapy-light-pink hover:text-white transition">Precios</Link>
               </li>
             </ul>
           </div>
@@ -63,39 +63,39 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/privacy" className="text-therapy-light-pink hover:text-white transition">Privacy Policy</Link>
+                <Link to="/privacy" className="text-therapy-light-pink hover:text-white transition">Política de Privacidad</Link>
               </li>
               <li>
-                <Link to="/terms" className="text-therapy-light-pink hover:text-white transition">Terms of Service</Link>
+                <Link to="/terms" className="text-therapy-light-pink hover:text-white transition">Términos de Servicio</Link>
               </li>
               <li>
-                <Link to="/gdpr" className="text-therapy-light-pink hover:text-white transition">GDPR Compliance</Link>
+                <Link to="/gdpr" className="text-therapy-light-pink hover:text-white transition">Cumplimiento GDPR</Link>
               </li>
               <li>
-                <Link to="/hipaa" className="text-therapy-light-pink hover:text-white transition">HIPAA Compliance</Link>
+                <Link to="/hipaa" className="text-therapy-light-pink hover:text-white transition">Cumplimiento HIPAA</Link>
               </li>
               <li>
-                <Link to="/security" className="text-therapy-light-pink hover:text-white transition">Security</Link>
+                <Link to="/security" className="text-therapy-light-pink hover:text-white transition">Seguridad</Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Contáctanos</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 text-therapy-cyan mt-0.5" />
-                <span className="text-therapy-light-pink">support@mindfulsession.com</span>
+                <span className="text-therapy-light-pink">soporte@terapia.com</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 text-therapy-cyan mt-0.5" />
-                <span className="text-therapy-light-pink">+1 (555) 123-4567</span>
+                <span className="text-therapy-light-pink">+34 555 123 456</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-therapy-cyan mt-0.5" />
                 <span className="text-therapy-light-pink">
-                  123 Therapy Street, Suite 100<br />
-                  San Francisco, CA 94103
+                  Calle Terapia 123, Oficina 100<br />
+                  Madrid, España 28001
                 </span>
               </li>
             </ul>
@@ -104,18 +104,18 @@ const Footer = () => {
         
         <div className="border-t border-therapy-navy mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-therapy-light-pink">
-            &copy; {currentYear} MindfulSession. All rights reserved.
+            &copy; {currentYear} terapIA. Todos los derechos reservados.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">
               <li>
                 <Link to="/privacy" className="text-therapy-light-pink hover:text-white text-sm transition">
-                  Privacy
+                  Privacidad
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-therapy-light-pink hover:text-white text-sm transition">
-                  Terms
+                  Términos
                 </Link>
               </li>
               <li>

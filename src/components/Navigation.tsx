@@ -18,7 +18,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-semibold text-therapy-navy">MindfulSession</span>
+              <span className="text-2xl font-semibold text-therapy-navy">terapIA</span>
             </Link>
           </div>
           
@@ -26,22 +26,22 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               <Link to="/" className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium">
-                Home
+                Inicio
               </Link>
               <Link to="/features" className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium">
-                Features
+                Características
               </Link>
               <Link to="/about" className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium">
-                About
+                Nosotros
               </Link>
               <Link to="/contact" className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium">
-                Contact
+                Contacto
               </Link>
               <Button variant="outline" className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream">
-                Sign In
+                Iniciar Sesión
               </Button>
               <Button className="bg-therapy-teal hover:bg-therapy-cyan text-white">
-                Sign Up
+                Registrarse
               </Button>
             </div>
           </div>
@@ -65,23 +65,23 @@ const Navigation = () => {
       )}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-gray-200">
           <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
-            Home
+            Inicio
           </Link>
           <Link to="/features" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
-            Features
+            Características
           </Link>
           <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
-            About
+            Nosotros
           </Link>
           <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
-            Contact
+            Contacto
           </Link>
           <div className="flex flex-col space-y-2 pt-2">
             <Button variant="outline" className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream w-full justify-center">
-              Sign In
+              Iniciar Sesión
             </Button>
             <Button className="bg-therapy-teal hover:bg-therapy-cyan text-white w-full justify-center">
-              Sign Up
+              Registrarse
             </Button>
           </div>
         </div>

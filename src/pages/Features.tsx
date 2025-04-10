@@ -26,7 +26,7 @@ const FeatureSection = ({ title, description, features, imageSide = "right" }: {
         </div>
         <div className="w-full md:w-1/2">
           <div className="bg-therapy-cream-pink h-64 rounded-xl flex items-center justify-center text-therapy-navy">
-            [Feature Illustration]
+            [Ilustración de Característica]
           </div>
         </div>
       </div>
@@ -43,11 +43,11 @@ const Features = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-therapy-navy">
-                Comprehensive Features for Modern Therapy
+                Características Completas para Terapia Moderna
               </h1>
               <p className="text-xl text-therapy-deep-purple">
-                MindfulSession provides everything you need to manage therapy sessions effectively,
-                from secure recording to AI-powered insights.
+                terapIA proporciona todo lo que necesitas para gestionar sesiones de terapia de manera efectiva,
+                desde grabación segura hasta análisis impulsados por IA.
               </p>
             </div>
           </div>
@@ -55,53 +55,53 @@ const Features = () => {
         
         <div className="container mx-auto px-4 py-12">
           <FeatureSection
-            title="Secure Session Recording & Storage"
-            description="Record therapy sessions directly or upload existing files with complete peace of mind about security and privacy."
+            title="Grabación y Almacenamiento Seguro de Sesiones"
+            description="Graba sesiones de terapia directamente o sube archivos existentes con total tranquilidad acerca de la seguridad y privacidad."
             features={[
-              "End-to-end encrypted audio and video recording",
-              "Direct integration with Google Drive for secure storage",
-              "Automated organization with patient-specific folders",
-              "Fine-grained access controls for patient privacy",
-              "Support for multiple file formats and quality settings"
+              "Grabación de audio y video con encriptación de extremo a extremo",
+              "Integración directa con Google Drive para almacenamiento seguro",
+              "Organización automatizada con carpetas específicas para pacientes",
+              "Controles de acceso detallados para la privacidad del paciente",
+              "Soporte para múltiples formatos de archivo y ajustes de calidad"
             ]}
             imageSide="right"
           />
           
           <FeatureSection
-            title="AI-Powered Transcription & Analysis"
-            description="Save time and gain insights with our advanced AI tools that transcribe and analyze session content."
+            title="Transcripción y Análisis Impulsados por IA"
+            description="Ahorra tiempo y obtén insights con nuestras herramientas avanzadas de IA que transcriben y analizan el contenido de las sesiones."
             features={[
-              "Accurate speech-to-text transcription using ElevenLabs API",
-              "Emotion detection to track patient sentiment over time",
-              "Key information extraction for important events and symptoms",
-              "Topic modeling to identify recurring themes in therapy",
-              "Progress tracking based on emotional indicators"
+              "Transcripción precisa de voz a texto usando la API de ElevenLabs",
+              "Detección de emociones para seguir el sentimiento del paciente a lo largo del tiempo",
+              "Extracción de información clave para eventos importantes y síntomas",
+              "Modelado de temas para identificar patrones recurrentes en la terapia",
+              "Seguimiento del progreso basado en indicadores emocionales"
             ]}
             imageSide="left"
           />
           
           <FeatureSection
-            title="Therapist Workflow Enhancement"
-            description="Streamline your practice with tools designed specifically for therapy professionals."
+            title="Mejora del Flujo de Trabajo del Terapeuta"
+            description="Optimiza tu práctica con herramientas diseñadas específicamente para profesionales de la terapia."
             features={[
-              "Comprehensive session notes with formatting options",
-              "Session tagging and categorization for easy reference",
-              "Calendar integration for scheduling and reminders",
-              "Custom template creation for structured session documentation",
-              "Quick access to patient history and previous sessions"
+              "Notas de sesión completas con opciones de formato",
+              "Etiquetado y categorización de sesiones para fácil referencia",
+              "Integración de calendario para programación y recordatorios",
+              "Creación de plantillas personalizadas para documentación estructurada de sesiones",
+              "Acceso rápido al historial del paciente y sesiones anteriores"
             ]}
             imageSide="right"
           />
           
           <FeatureSection
-            title="Patient Portal & Engagement"
-            description="Provide patients with secure access to their therapy resources and foster engagement between sessions."
+            title="Portal y Participación del Paciente"
+            description="Proporciona a los pacientes acceso seguro a sus recursos de terapia y fomenta la participación entre sesiones."
             features={[
-              "Secure patient-specific login and access controls",
-              "Email notifications when new sessions are available",
-              "Mobile-responsive design for access on any device",
-              "Optional patient journaling features between sessions",
-              "Progress visualization and therapy journey tracking"
+              "Inicio de sesión y controles de acceso específicos para el paciente",
+              "Notificaciones por correo electrónico cuando hay nuevas sesiones disponibles",
+              "Diseño adaptable para acceso desde cualquier dispositivo",
+              "Funciones opcionales de diario para el paciente entre sesiones",
+              "Visualización del progreso y seguimiento del viaje terapéutico"
             ]}
             imageSide="left"
           />

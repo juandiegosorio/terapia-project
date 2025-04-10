@@ -40,14 +40,14 @@ const Contact = () => {
       <Navigation />
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-therapy-navy text-center">Contact Us</h1>
+          <h1 className="text-3xl font-bold mb-8 text-therapy-navy text-center">Contáctanos</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-therapy-navy">Get in Touch</h2>
+              <h2 className="text-2xl font-bold mb-6 text-therapy-navy">Ponte en Contacto</h2>
               <p className="mb-8 text-therapy-deep-purple">
-                We'd love to hear from you. Whether you have questions about our platform, need assistance,
-                or want to provide feedback, our team is here to help.
+                Nos encantaría saber de ti. Ya sea que tengas preguntas sobre nuestra plataforma, necesites ayuda
+                o quieras proporcionar comentarios, nuestro equipo está aquí para ayudarte.
               </p>
               
               <div className="space-y-6">
@@ -55,25 +55,25 @@ const Contact = () => {
                   <Mail className="h-6 w-6 mr-4 text-therapy-teal" />
                   <div>
                     <h3 className="font-semibold text-therapy-navy">Email</h3>
-                    <p className="text-therapy-deep-purple">support@mindfulsession.com</p>
+                    <p className="text-therapy-deep-purple">soporte@terapia.com</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 mr-4 text-therapy-teal" />
                   <div>
-                    <h3 className="font-semibold text-therapy-navy">Phone</h3>
-                    <p className="text-therapy-deep-purple">+1 (555) 123-4567</p>
+                    <h3 className="font-semibold text-therapy-navy">Teléfono</h3>
+                    <p className="text-therapy-deep-purple">+34 555 123 456</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 mr-4 text-therapy-teal" />
                   <div>
-                    <h3 className="font-semibold text-therapy-navy">Office</h3>
+                    <h3 className="font-semibold text-therapy-navy">Oficina</h3>
                     <p className="text-therapy-deep-purple">
-                      123 Therapy Street, Suite 100<br />
-                      San Francisco, CA 94103
+                      Calle Terapia 123, Oficina 100<br />
+                      Madrid, España 28001
                     </p>
                   </div>
                 </div>
@@ -83,21 +83,21 @@ const Contact = () => {
             <div className="bg-therapy-cream-pink p-8 rounded-xl">
               {isSubmitted ? (
                 <div className="text-center py-10">
-                  <h3 className="text-2xl font-bold text-therapy-navy mb-3">Thank You!</h3>
+                  <h3 className="text-2xl font-bold text-therapy-navy mb-3">¡Gracias!</h3>
                   <p className="text-therapy-deep-purple">
-                    Your message has been received. We'll get back to you as soon as possible.
+                    Tu mensaje ha sido recibido. Nos pondremos en contacto contigo lo antes posible.
                   </p>
                   <Button 
                     onClick={() => setIsSubmitted(false)} 
                     className="mt-6 bg-therapy-teal hover:bg-therapy-cyan text-white"
                   >
-                    Send Another Message
+                    Enviar Otro Mensaje
                   </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name" className="text-therapy-navy">Name</Label>
+                    <Label htmlFor="name" className="text-therapy-navy">Nombre</Label>
                     <Input
                       id="name"
                       name="name"
@@ -122,7 +122,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="subject" className="text-therapy-navy">Subject</Label>
+                    <Label htmlFor="subject" className="text-therapy-navy">Asunto</Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -134,7 +134,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="message" className="text-therapy-navy">Message</Label>
+                    <Label htmlFor="message" className="text-therapy-navy">Mensaje</Label>
                     <textarea
                       id="message"
                       name="message"
@@ -151,7 +151,7 @@ const Contact = () => {
                     className="w-full bg-therapy-teal hover:bg-therapy-cyan text-white"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                   </Button>
                 </form>
               )}

@@ -12,43 +12,43 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const features = [
   {
-    title: "Secure Session Recording",
-    description: "Record audio or video sessions directly within the app with end-to-end encryption.",
+    title: "Grabación Segura de Sesiones",
+    description: "Graba sesiones de audio o video directamente en la aplicación con encriptación de extremo a extremo.",
     icon: Video,
     color: "text-therapy-teal",
     bg: "bg-therapy-light-cream/70"
   },
   {
-    title: "AI-Powered Transcription",
-    description: "Automatic speech-to-text transcription using ElevenLabs advanced API.",
+    title: "Transcripción con IA",
+    description: "Transcripción automática de voz a texto utilizando la avanzada API de ElevenLabs.",
     icon: MessageSquare,
     color: "text-therapy-purple",
     bg: "bg-therapy-light-pink/70"
   },
   {
-    title: "Seamless File Management",
-    description: "Organize patient sessions in Google Drive with automated folder structures.",
+    title: "Gestión Fluida de Archivos",
+    description: "Organiza sesiones de pacientes en Google Drive con estructuras de carpetas automatizadas.",
     icon: Folder,
     color: "text-therapy-gold",
     bg: "bg-therapy-cream/50"
   },
   {
-    title: "Emotional Analysis",
-    description: "AI-driven insights detect emotions and extract relevant patient information.",
+    title: "Análisis Emocional",
+    description: "Análisis impulsados por IA que detectan emociones y extraen información relevante del paciente.",
     icon: BrainCircuit,
     color: "text-therapy-magenta",
     bg: "bg-therapy-light-pink/50"
   },
   {
-    title: "Therapist Notes",
-    description: "Add personal notes to each session for comprehensive patient care.",
+    title: "Notas del Terapeuta",
+    description: "Añade notas personales a cada sesión para una atención integral al paciente.",
     icon: PenSquare,
     color: "text-therapy-navy",
     bg: "bg-therapy-cream-pink/70"
   },
   {
-    title: "Secure Access Control",
-    description: "Fine-grained permissions ensure patients only see their own sessions.",
+    title: "Control de Acceso Seguro",
+    description: "Permisos detallados que garantizan que los pacientes solo vean sus propias sesiones.",
     icon: Lock,
     color: "text-therapy-dark-teal",
     bg: "bg-therapy-light-cream/70"
@@ -61,11 +61,11 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-therapy-dark-blue sm:text-4xl">
-            Powerful Features for Modern Therapy
+            Potentes Características para Terapia Moderna
           </h2>
           <p className="mt-4 text-lg text-therapy-deep-purple max-w-3xl mx-auto">
-            Our platform provides everything therapists need to streamline session management 
-            and enhance patient care with AI-powered insights.
+            Nuestra plataforma proporciona todo lo que los terapeutas necesitan para agilizar la gestión 
+            de sesiones y mejorar la atención al paciente con análisis impulsados por IA.
           </p>
         </div>
 

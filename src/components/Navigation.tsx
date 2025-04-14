@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,7 @@ import { LoginModal } from "./auth/LoginModal";
 import { RegisterModal } from "./auth/RegisterModal";
 import { toast } from "@/components/ui/use-toast";
 
-const Navigation = () => {
+export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
@@ -22,7 +21,6 @@ const Navigation = () => {
     setUser({ email, role });
     setIsLoginOpen(false);
     
-    // Redirect based on role to new path structure
     if (role === "terapeuta") {
       navigate("/dashboard/terapeuta/pacientes");
     } else {
@@ -34,7 +32,6 @@ const Navigation = () => {
     setUser({ email, role });
     setIsRegisterOpen(false);
     
-    // Redirect based on role to new path structure
     if (role === "terapeuta") {
       navigate("/dashboard/terapeuta/pacientes");
     } else {
@@ -69,7 +66,6 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* Desktop navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               <Link
@@ -133,7 +129,6 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -145,7 +140,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen

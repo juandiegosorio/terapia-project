@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LoginModal } from "./auth/LoginModal";
 import { RegisterModal } from "./auth/RegisterModal";
+import { toast } from "@/components/ui/use-toast";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,18 +21,40 @@ const Navigation = () => {
   const handleLogin = (email: string, password: string, role: string) => {
     setUser({ email, role });
     setIsLoginOpen(false);
-    navigate(`/dashboard/${role}`);
+    
+    // Redirect based on role to new path structure
+    if (role === "terapeuta") {
+      navigate("/dashboard/terapeuta/pacientes");
+    } else {
+      navigate("/dashboard/paciente");
+    }
   };
 
   const handleRegister = (email: string, password: string, role: string) => {
     setUser({ email, role });
     setIsRegisterOpen(false);
-    navigate(`/dashboard/${role}`);
+    
+    // Redirect based on role to new path structure
+    if (role === "terapeuta") {
+      navigate("/dashboard/terapeuta/pacientes");
+    } else {
+      navigate("/dashboard/paciente");
+    }
+    
+    toast({
+      title: "Registro exitoso",
+      description: `Te has registrado como ${role}`,
+    });
   };
 
   const handleLogout = () => {
     setUser(null);
     navigate("/");
+    
+    toast({
+      title: "Sesión cerrada",
+      description: "Has cerrado sesión correctamente",
+    });
   };
 
   return (
@@ -83,7 +107,7 @@ const Navigation = () => {
                     Cerrar Sesión
                   </Button>
                   <Link
-                    to={`/dashboard/${user.role}`}
+                    to={user.role === "terapeuta" ? "/dashboard/terapeuta/pacientes" : "/dashboard/paciente"}
                     className="bg-therapy-teal hover:bg-therapy-cyan text-white px-4 py-2 rounded-md text-sm font-medium"
                   >
                     Dashboard
@@ -152,7 +176,7 @@ const Navigation = () => {
                 Cerrar Sesión
               </Button>
               <Link
-                to={`/dashboard/${user.role}`}
+                to={user.role === "terapeuta" ? "/dashboard/terapeuta/pacientes" : "/dashboard/paciente"}
                 className="block text-center bg-therapy-teal hover:bg-therapy-cyan text-white px-4 py-2 rounded-md text-sm font-medium"
               >
                 Dashboard

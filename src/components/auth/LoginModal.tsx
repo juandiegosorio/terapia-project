@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
+import { toast } from "@/components/ui/use-toast"
 
 interface LoginModalProps {
   isOpen: boolean
@@ -26,10 +27,22 @@ export function LoginModal({ isOpen, onClose, onLogin }: LoginModalProps) {
     // Mock login logic for demo
     if (email === "terapeuta@test.com" && password === "password") {
       onLogin(email, password, "terapeuta")
+      toast({
+        title: "Inicio de sesión exitoso",
+        description: "Has iniciado sesión como terapeuta",
+      })
     } else if (email === "paciente@test.com" && password === "password") {
       onLogin(email, password, "paciente")
+      toast({
+        title: "Inicio de sesión exitoso",
+        description: "Has iniciado sesión como paciente",
+      })
     } else {
-      alert("Credenciales inválidas")
+      toast({
+        title: "Credenciales inválidas",
+        description: "El correo o la contraseña son incorrectos. Intenta con terapeuta@test.com / password o paciente@test.com / password",
+        variant: "destructive"
+      })
     }
   }
 
@@ -68,6 +81,11 @@ export function LoginModal({ isOpen, onClose, onLogin }: LoginModalProps) {
             <Button type="submit" className="w-full">
               Iniciar Sesión
             </Button>
+          </div>
+          <div className="text-xs text-center text-gray-500">
+            <p>Cuentas demo:</p>
+            <p>terapeuta@test.com / password</p>
+            <p>paciente@test.com / password</p>
           </div>
         </form>
       </DialogContent>

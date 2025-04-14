@@ -18,6 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const TherapistLayout = () => {
   const navigate = useNavigate();
@@ -193,6 +194,8 @@ const TherapistLayout = () => {
       <main className="flex-1 container mx-auto px-4 py-6">
         <Outlet />
       </main>
+
+      <Footer />
     </div>
   );
 };

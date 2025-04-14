@@ -10,6 +10,8 @@ import Features from "./pages/Features";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { PacienteDashboard } from "./components/dashboard/PacienteDashboard";
+import { TerapeutaDashboard } from "./components/dashboard/TerapeutaDashboard";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -26,7 +28,8 @@ const App: React.FC = () => (
             <Route path="/features" element={<Features />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/dashboard/paciente" element={<PacienteDashboard />} />
+            <Route path="/dashboard/terapeuta" element={<TerapeutaDashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

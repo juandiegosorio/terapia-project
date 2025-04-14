@@ -1,4 +1,3 @@
-
 import {
   Dialog,
   DialogContent,
@@ -36,7 +35,7 @@ export function RegisterModal({ isOpen, onClose, onRegister }: RegisterModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Crear Cuenta</DialogTitle>
           <DialogDescription>

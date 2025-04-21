@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { 
   Search, 
@@ -26,6 +25,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
@@ -38,7 +38,6 @@ import {
 } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
 
-// Mock ejercicios
 const mockEjercicios = [
   {
     id: 1,
@@ -82,7 +81,6 @@ const mockEjercicios = [
   },
 ];
 
-// Categorías disponibles
 const categorias = [
   "Ansiedad",
   "Depresión",
@@ -119,7 +117,6 @@ const BancoEjercicios = () => {
     if (file) {
       setUploadedFile(file);
       
-      // Determine file type
       let fileType = "PDF";
       if (file.type.includes("video")) {
         fileType = "Video";
@@ -137,7 +134,6 @@ const BancoEjercicios = () => {
   };
 
   const handleAddEjercicio = () => {
-    // Validate form data
     if (!newEjercicio.nombre || !newEjercicio.descripcion || !newEjercicio.categoria) {
       toast({
         title: "Error",
@@ -147,7 +143,6 @@ const BancoEjercicios = () => {
       return;
     }
 
-    // Add new ejercicio
     const id = ejercicios.length > 0 ? Math.max(...ejercicios.map(e => e.id)) + 1 : 1;
     const today = new Date().toLocaleDateString('es-ES');
     
@@ -160,7 +155,6 @@ const BancoEjercicios = () => {
       },
     ]);
 
-    // Reset form and close dialog
     setNewEjercicio({
       nombre: "",
       descripcion: "",
@@ -172,7 +166,7 @@ const BancoEjercicios = () => {
     
     toast({
       title: "Ejercicio añadido",
-      description: `"${newEjercicio.nombre}" ha sido añadido al banco de ejercicios.`,
+      description: `"${newEjercicio.nombre}" ha sido añadido al banco de ejercicios.",
     });
   };
 
@@ -284,96 +278,97 @@ const BancoEjercicios = () => {
         )}
       </div>
 
-      {/* Add Ejercicio Dialog */}
       <Dialog open={isAddEjercicioOpen} onOpenChange={setIsAddEjercicioOpen}>
-        <DialogContent className="sm:max-w-[550px]">
+        <DialogContent className="sm:max-w-[550px] max-h-[90vh]">
           <DialogHeader>
             <DialogTitle>Añadir nuevo ejercicio</DialogTitle>
             <DialogDescription>
               Completa la información para añadir un nuevo ejercicio al banco.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid grid-cols-1 gap-4 py-4">
-            <div className="space-y-2">
-              <Label htmlFor="nombre">Nombre del ejercicio *</Label>
-              <Input
-                id="nombre"
-                value={newEjercicio.nombre}
-                onChange={(e) => setNewEjercicio({ ...newEjercicio, nombre: e.target.value })}
-                placeholder="Nombre descriptivo del ejercicio"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="descripcion">Descripción *</Label>
-              <Textarea
-                id="descripcion"
-                value={newEjercicio.descripcion}
-                onChange={(e) => setNewEjercicio({ ...newEjercicio, descripcion: e.target.value })}
-                placeholder="Describe en qué consiste el ejercicio y cómo debe realizarse"
-                className="min-h-[100px]"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="categoria">Categoría *</Label>
-              <Select 
-                value={newEjercicio.categoria} 
-                onValueChange={(value) => setNewEjercicio({ ...newEjercicio, categoria: value })}
-              >
-                <SelectTrigger id="categoria">
-                  <SelectValue placeholder="Selecciona una categoría" />
-                </SelectTrigger>
-                <SelectContent>
-                  {categorias.map((categoria) => (
-                    <SelectItem key={categoria} value={categoria}>
-                      {categoria}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="space-y-2">
-              <Label>Archivo del ejercicio</Label>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                <input
-                  type="file"
-                  id="ejercicio-file-upload"
-                  className="hidden"
-                  onChange={handleFileUpload}
+          <ScrollArea className="max-h-[60vh] pr-4">
+            <div className="grid grid-cols-1 gap-4 py-4 pr-2">
+              <div className="space-y-2">
+                <Label htmlFor="nombre">Nombre del ejercicio *</Label>
+                <Input
+                  id="nombre"
+                  value={newEjercicio.nombre}
+                  onChange={(e) => setNewEjercicio({ ...newEjercicio, nombre: e.target.value })}
+                  placeholder="Nombre descriptivo del ejercicio"
                 />
-                {uploadedFile ? (
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-center space-x-2 text-therapy-teal">
-                      <Upload className="h-5 w-5" />
-                      <span className="font-medium">Archivo subido</span>
-                    </div>
-                    <p className="text-sm text-gray-500 truncate">{uploadedFile.name}</p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setUploadedFile(null)}
-                    >
-                      Cambiar archivo
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <Upload className="h-8 w-8 mx-auto text-gray-400" />
-                    <p className="text-sm text-gray-500">
-                      Arrastra un archivo o
-                    </p>
-                    <Label htmlFor="ejercicio-file-upload" className="inline-block">
-                      <Button variant="outline" size="sm" className="cursor-pointer">
-                        Seleccionar archivo
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="descripcion">Descripción *</Label>
+                <Textarea
+                  id="descripcion"
+                  value={newEjercicio.descripcion}
+                  onChange={(e) => setNewEjercicio({ ...newEjercicio, descripcion: e.target.value })}
+                  placeholder="Describe en qué consiste el ejercicio y cómo debe realizarse"
+                  className="min-h-[100px]"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="categoria">Categoría *</Label>
+                <Select 
+                  value={newEjercicio.categoria} 
+                  onValueChange={(value) => setNewEjercicio({ ...newEjercicio, categoria: value })}
+                >
+                  <SelectTrigger id="categoria">
+                    <SelectValue placeholder="Selecciona una categoría" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {categorias.map((categoria) => (
+                      <SelectItem key={categoria} value={categoria}>
+                        {categoria}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label>Archivo del ejercicio</Label>
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                  <input
+                    type="file"
+                    id="ejercicio-file-upload"
+                    className="hidden"
+                    onChange={handleFileUpload}
+                  />
+                  {uploadedFile ? (
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2 text-therapy-teal">
+                        <Upload className="h-5 w-5" />
+                        <span className="font-medium">Archivo subido</span>
+                      </div>
+                      <p className="text-sm text-gray-500 truncate">{uploadedFile.name}</p>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setUploadedFile(null)}
+                      >
+                        Cambiar archivo
                       </Button>
-                    </Label>
-                    <p className="text-xs text-gray-400 mt-2">
-                      Formatos aceptados: PDF, documentos, imágenes, audio y video
-                    </p>
-                  </div>
-                )}
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <Upload className="h-8 w-8 mx-auto text-gray-400" />
+                      <p className="text-sm text-gray-500">
+                        Arrastra un archivo o
+                      </p>
+                      <Label htmlFor="ejercicio-file-upload" className="inline-block">
+                        <Button variant="outline" size="sm" className="cursor-pointer">
+                          Seleccionar archivo
+                        </Button>
+                      </Label>
+                      <p className="text-xs text-gray-400 mt-2">
+                        Formatos aceptados: PDF, documentos, imágenes, audio y video
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollArea>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsAddEjercicioOpen(false)}>
               Cancelar
@@ -385,7 +380,6 @@ const BancoEjercicios = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Delete Confirmation Dialog */}
       <Dialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

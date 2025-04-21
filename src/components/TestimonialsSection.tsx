@@ -25,7 +25,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-therapy-dark-blue via-therapy-navy to-therapy-purple text-white">
+    <section className="py-16 bg-gradient-to-br from-therapy-blue via-therapy-purple to-therapy-pink text-therapy-green">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -38,12 +38,12 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 transition-colors duration-300">
+            <Card key={index} className="bg-therapy-yellow/50 backdrop-blur-md border-therapy-teal/20 text-therapy-blue hover:bg-therapy-yellow/60 transition-colors duration-300">
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 opacity-50 mb-4" />
                 <p className="mb-6">{testimonial.content}</p>
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full overflow-hidden bg-therapy-cyan/30 flex items-center justify-center mr-4">
+                  <div className="h-12 w-12 rounded-full overflow-hidden bg-therapy-teal/30 flex items-center justify-center mr-4">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.author}

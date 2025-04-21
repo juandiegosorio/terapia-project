@@ -53,11 +53,11 @@ export default function PatientLayout() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-30 w-full bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-30 w-full bg-therapy-green border-b border-therapy-blue">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-semibold text-therapy-navy">
+              <Link to="/" className="text-2xl font-semibold text-therapy-blue">
                 terapIA
               </Link>
             </div>
@@ -69,11 +69,11 @@ export default function PatientLayout() {
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-navy",
+                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-purple",
                     location.pathname === link.path ||
                     (link.path.includes("sesiones") && location.pathname === "/dashboard/paciente")
                       ? "text-therapy-teal"
-                      : "text-therapy-deep-purple"
+                      : "text-therapy-blue"
                   )}
                 >
                   {link.icon}
@@ -88,18 +88,18 @@ export default function PatientLayout() {
                   <button className="outline-none">
                     <Avatar>
                       <AvatarImage src="/placeholder.svg" alt="Perfil" />
-                      <AvatarFallback>PC</AvatarFallback>
+                      <AvatarFallback className="bg-therapy-yellow text-therapy-blue">PC</AvatarFallback>
                     </Avatar>
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-white">
+                <DropdownMenuContent align="end" className="bg-therapy-green">
                   <DropdownMenuItem asChild>
                     <Link to="/dashboard/paciente/perfil" className="flex items-center cursor-pointer">
                       <UserIcon className="mr-2 h-4 w-4" />
                       <span>Ver perfil</span>
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuSeparator />
+                  <DropdownMenuSeparator className="bg-therapy-blue/30" />
                   <DropdownMenuItem onClick={handleLogout} className="flex items-center cursor-pointer">
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Cerrar Sesión</span>
@@ -112,7 +112,7 @@ export default function PatientLayout() {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="p-2 rounded-md text-therapy-deep-purple"
+                className="p-2 rounded-md text-therapy-blue"
               >
                 <svg
                   className="h-6 w-6"
@@ -149,7 +149,7 @@ export default function PatientLayout() {
               : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-therapy-green border-b border-therapy-blue">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -157,8 +157,8 @@ export default function PatientLayout() {
                 className={cn(
                   "flex items-center px-3 py-2 rounded-md text-base font-medium",
                   location.pathname === link.path
-                    ? "text-therapy-teal bg-gray-100"
-                    : "text-therapy-deep-purple hover:text-therapy-navy hover:bg-gray-100"
+                    ? "text-therapy-teal bg-therapy-yellow"
+                    : "text-therapy-blue hover:text-therapy-purple hover:bg-therapy-yellow"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -168,7 +168,7 @@ export default function PatientLayout() {
             ))}
             <Link
               to="/dashboard/paciente/perfil"
-              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-gray-100"
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-therapy-blue hover:text-therapy-purple hover:bg-therapy-yellow"
               onClick={() => setIsMenuOpen(false)}
             >
               <UserIcon className="h-5 w-5 mr-2" />
@@ -176,7 +176,7 @@ export default function PatientLayout() {
             </Link>
             <button
               onClick={handleLogout}
-              className="flex w-full items-center px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-gray-100"
+              className="flex w-full items-center px-3 py-2 rounded-md text-base font-medium text-therapy-blue hover:text-therapy-purple hover:bg-therapy-yellow"
             >
               <LogOut className="h-5 w-5 mr-2" />
               Cerrar Sesión

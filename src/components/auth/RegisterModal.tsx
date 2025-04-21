@@ -36,16 +36,16 @@ export function RegisterModal({ isOpen, onClose, onRegister }: RegisterModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
+      <DialogContent className="max-h-[90vh] overflow-y-auto bg-therapy-green border-therapy-teal">
+        <DialogHeader className="text-therapy-blue">
           <DialogTitle>Crear Cuenta</DialogTitle>
-          <DialogDescription>
+          <DialogDescription className="text-therapy-blue/80">
             Registra una nueva cuenta en terapIA
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">Correo electrónico</Label>
+            <Label htmlFor="email" className="text-therapy-blue">Correo electrónico</Label>
             <Input
               id="email"
               type="email"
@@ -53,32 +53,34 @@ export function RegisterModal({ isOpen, onClose, onRegister }: RegisterModalProp
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="bg-therapy-yellow/50 border-therapy-teal text-therapy-blue placeholder:text-therapy-blue/50"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Contraseña</Label>
+            <Label htmlFor="password" className="text-therapy-blue">Contraseña</Label>
             <Input
               id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              className="bg-therapy-yellow/50 border-therapy-teal text-therapy-blue"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="role">Rol</Label>
+            <Label htmlFor="role" className="text-therapy-blue">Rol</Label>
             <Select onValueChange={setRole} required>
-              <SelectTrigger>
+              <SelectTrigger id="role" className="bg-therapy-yellow/50 border-therapy-teal text-therapy-blue">
                 <SelectValue placeholder="Selecciona un rol" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="terapeuta">Terapeuta</SelectItem>
-                <SelectItem value="paciente">Paciente</SelectItem>
+              <SelectContent className="bg-therapy-green text-therapy-blue border-therapy-teal">
+                <SelectItem value="terapeuta" className="focus:bg-therapy-teal/20">Terapeuta</SelectItem>
+                <SelectItem value="paciente" className="focus:bg-therapy-teal/20">Paciente</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="pt-4">
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-therapy-purple hover:bg-therapy-purple/90 text-therapy-green">
               Registrarse
             </Button>
           </div>

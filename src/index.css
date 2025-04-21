@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 120 100% 79%; /* Based on #98ff96 */
     --foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
-    --card: 0 0% 100%;
-    --card-foreground: 215 42% 45%;
+    --card: 60 93% 67%; /* Based on #f8f85d */
+    --card-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --popover: 120 100% 79%; /* Based on #98ff96 */
-    --popover-foreground: 215 42% 45%;
+    --popover-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --primary: 174 72% 56%; /* Based on #40e0d0 */
-    --primary-foreground: 215 42% 45%;
+    --primary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --secondary: 276 100% 70%; /* Based on #cc5eff */
-    --secondary-foreground: 215 42% 45%;
+    --secondary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --muted: 60 93% 67%; /* Based on #f8f85d */
-    --muted-foreground: 215 42% 45%;
+    --muted-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --accent: 330 100% 71%; /* Based on #FF69B4 */
-    --accent-foreground: 215 42% 45%;
+    --accent-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --destructive: 330 100% 71%; /* Based on #FF69B4 */
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 120 100% 79%; /* Based on #98ff96 */
     
-    --border: 215 42% 45%;
-    --input: 120 100% 79%;
-    --ring: 174 72% 56%;
+    --border: 215 42% 45%; /* Based on #3c6aa9 */
+    --input: 120 100% 79%; /* Based on #98ff96 */
+    --ring: 174 72% 56%; /* Based on #40e0d0 */
     
     --radius: 0.75rem;
   }
@@ -53,7 +53,7 @@
   }
   
   .therapy-card {
-    @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+    @apply bg-therapy-yellow rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
   }
   
   .therapy-button {
@@ -69,7 +69,7 @@
   }
   
   .therapy-accent {
-    @apply bg-therapy-pink text-white;
+    @apply bg-therapy-pink text-therapy-blue;
   }
 }
 

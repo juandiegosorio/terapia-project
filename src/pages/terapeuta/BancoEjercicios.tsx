@@ -166,7 +166,7 @@ const BancoEjercicios = () => {
     
     toast({
       title: "Ejercicio añadido",
-      description: `"${newEjercicio.nombre}" ha sido añadido al banco de ejercicios.",
+      description: `"${newEjercicio.nombre}" ha sido añadido al banco de ejercicios.`,
     });
   };
 

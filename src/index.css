@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 60 93% 67%; /* Based on #f8f85d */
-    --foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --background: 215 42% 45%;
+    --foreground: 0 0% 100%;
     
-    --card: 120 100% 79%; /* Based on #98ff96 */
-    --card-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --card: 215 42% 45%;
+    --card-foreground: 0 0% 100%;
     
-    --popover: 276 100% 70%; /* Based on #cc5eff */
-    --popover-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --popover: 215 42% 45%;
+    --popover-foreground: 0 0% 100%;
     
-    --primary: 276 100% 70%; /* Based on #cc5eff */
-    --primary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --primary: 276 100% 70%;
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: 174 72% 56%; /* Based on #40e0d0 */
-    --secondary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 0 0% 0%;
     
-    --muted: 60 93% 67%; /* Based on #f8f85d */
-    --muted-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --muted: 60 93% 67%;
+    --muted-foreground: 0 0% 0%;
     
-    --accent: 330 100% 71%; /* Based on #FF69B4 */
-    --accent-foreground: 215 42% 45%; /* Based on #3c6aa9 */
+    --accent: 120 100% 79%;
+    --accent-foreground: 0 0% 0%;
     
-    --destructive: 330 100% 71%; /* Based on #FF69B4 */
-    --destructive-foreground: 60 93% 67%; /* Based on #f8f85d */
+    --destructive: 330 100% 71%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 215 42% 45%; /* Based on #3c6aa9 */
-    --input: 276 100% 70%; /* Based on #cc5eff */
-    --ring: 174 72% 56%; /* Based on #40e0d0 */
+    --border: 215 42% 45%;
+    --input: 276 100% 70%;
+    --ring: 174 72% 56%;
     
     --radius: 0.75rem;
   }
@@ -49,27 +49,27 @@
 
 @layer components {
   .therapy-gradient {
-    @apply bg-gradient-to-br from-therapy-blue via-therapy-teal to-therapy-purple;
+    @apply bg-gradient-to-br from-therapy-blue via-therapy-purple to-therapy-teal;
   }
   
   .therapy-card {
-    @apply bg-therapy-yellow rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+    @apply bg-gradient-to-tr from-therapy-blue to-therapy-purple/80 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
   }
   
   .therapy-button {
-    @apply bg-therapy-purple text-therapy-blue hover:bg-opacity-90 transition-colors duration-200;
+    @apply bg-therapy-purple text-white hover:bg-therapy-purple/90 transition-colors duration-200;
   }
   
   .therapy-input {
-    @apply bg-therapy-yellow border-therapy-teal focus:ring-therapy-purple;
+    @apply bg-therapy-blue border-therapy-teal focus:ring-therapy-purple;
   }
   
   .therapy-highlight {
-    @apply bg-therapy-teal text-therapy-blue;
+    @apply bg-therapy-teal text-white;
   }
   
   .therapy-accent {
-    @apply bg-therapy-pink text-therapy-blue;
+    @apply bg-therapy-pink text-white;
   }
 }
 

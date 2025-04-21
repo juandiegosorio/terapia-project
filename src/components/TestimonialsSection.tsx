@@ -25,7 +25,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-therapy-purple via-therapy-teal to-therapy-pink text-therapy-yellow">
+    <section className="py-16 bg-gradient-to-br from-therapy-blue via-therapy-teal to-therapy-purple text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-therapy-yellow/50 backdrop-blur-md border-therapy-teal/20 text-therapy-blue hover:bg-therapy-yellow/60 transition-colors duration-300">
+            <Card key={index} className="bg-gradient-to-br from-therapy-blue/80 to-therapy-purple/50 border-none text-white">
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 opacity-50 mb-4" />
                 <p className="mb-6">{testimonial.content}</p>

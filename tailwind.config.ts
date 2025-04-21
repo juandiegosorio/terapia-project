@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,37 +20,37 @@ export default {
     extend: {
       colors: {
         border: "#3c6aa9",
-        input: "#98ff96",
+        input: "#cc5eff",
         ring: "#40e0d0",
-        background: "#98ff96",
-        foreground: "#3c6aa9",
+        background: "#3c6aa9",
+        foreground: "#ffffff",
         primary: {
-          DEFAULT: "#40e0d0",
-          foreground: "#3c6aa9",
+          DEFAULT: "#cc5eff",
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#cc5eff",
-          foreground: "#3c6aa9",
+          DEFAULT: "#40e0d0",
+          foreground: "#000000",
         },
         destructive: {
           DEFAULT: "#FF69B4",
-          foreground: "#98ff96",
+          foreground: "#ffffff",
         },
         muted: {
           DEFAULT: "#f8f85d",
-          foreground: "#3c6aa9",
+          foreground: "#000000",
         },
         accent: {
-          DEFAULT: "#FF69B4",
-          foreground: "#3c6aa9",
+          DEFAULT: "#98ff96",
+          foreground: "#000000",
         },
         popover: {
-          DEFAULT: "#98ff96",
-          foreground: "#3c6aa9",
+          DEFAULT: "#3c6aa9",
+          foreground: "#ffffff",
         },
         card: {
-          DEFAULT: "#f8f85d",
-          foreground: "#3c6aa9",
+          DEFAULT: "#3c6aa9",
+          foreground: "#ffffff",
         },
         therapy: {
           teal: "#40e0d0",

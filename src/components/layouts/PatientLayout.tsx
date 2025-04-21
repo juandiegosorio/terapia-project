@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { 
@@ -53,7 +52,7 @@ export default function PatientLayout() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-30 w-full bg-therapy-green border-b border-therapy-blue">
+      <header className="sticky top-0 z-30 w-full bg-therapy-yellow border-b border-therapy-blue">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
@@ -185,7 +184,7 @@ export default function PatientLayout() {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6">
+      <main className="flex-1 container mx-auto px-4 py-6 bg-therapy-yellow">
         <Outlet />
       </main>
 

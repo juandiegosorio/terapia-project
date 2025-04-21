@@ -5,19 +5,19 @@
 
 @layer base {
   :root {
-    --background: 120 100% 79%; /* Based on #98ff96 */
+    --background: 60 93% 67%; /* Based on #f8f85d */
     --foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
-    --card: 60 93% 67%; /* Based on #f8f85d */
+    --card: 120 100% 79%; /* Based on #98ff96 */
     --card-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
-    --popover: 120 100% 79%; /* Based on #98ff96 */
+    --popover: 276 100% 70%; /* Based on #cc5eff */
     --popover-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
-    --primary: 174 72% 56%; /* Based on #40e0d0 */
+    --primary: 276 100% 70%; /* Based on #cc5eff */
     --primary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
-    --secondary: 276 100% 70%; /* Based on #cc5eff */
+    --secondary: 174 72% 56%; /* Based on #40e0d0 */
     --secondary-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --muted: 60 93% 67%; /* Based on #f8f85d */
@@ -27,10 +27,10 @@
     --accent-foreground: 215 42% 45%; /* Based on #3c6aa9 */
     
     --destructive: 330 100% 71%; /* Based on #FF69B4 */
-    --destructive-foreground: 120 100% 79%; /* Based on #98ff96 */
+    --destructive-foreground: 60 93% 67%; /* Based on #f8f85d */
     
     --border: 215 42% 45%; /* Based on #3c6aa9 */
-    --input: 120 100% 79%; /* Based on #98ff96 */
+    --input: 276 100% 70%; /* Based on #cc5eff */
     --ring: 174 72% 56%; /* Based on #40e0d0 */
     
     --radius: 0.75rem;
@@ -57,15 +57,15 @@
   }
   
   .therapy-button {
-    @apply bg-therapy-teal text-therapy-blue hover:bg-opacity-90 transition-colors duration-200;
+    @apply bg-therapy-purple text-therapy-blue hover:bg-opacity-90 transition-colors duration-200;
   }
   
   .therapy-input {
-    @apply bg-therapy-green border-therapy-teal focus:ring-therapy-purple;
+    @apply bg-therapy-yellow border-therapy-teal focus:ring-therapy-purple;
   }
   
   .therapy-highlight {
-    @apply bg-therapy-yellow text-therapy-blue;
+    @apply bg-therapy-teal text-therapy-blue;
   }
   
   .therapy-accent {

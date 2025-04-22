@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -55,7 +54,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 mr-4 text-therapy-teal" />
                   <div>
                     <h3 className="font-semibold text-therapy-navy">Email</h3>
-                    <p className="text-therapy-deep-purple">soporte@terapia.com</p>
+                    <p className="text-therapy-deep-purple">soporte@joy.com</p>
                   </div>
                 </div>
                 
@@ -72,7 +71,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-therapy-navy">Oficina</h3>
                     <p className="text-therapy-deep-purple">
-                      Calle Terapia 123, Oficina 100<br />
+                      Calle JOY 123, Oficina 100<br />
                       Madrid, España 28001
                     </p>
                   </div>

@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,7 +11,7 @@ const CallToAction = () => {
               ¿Listo para mejorar tu práctica terapéutica?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Comienza a optimizar la gestión de tus sesiones hoy con terapIA.
+              Comienza a optimizar la gestión de tus sesiones hoy con JOY.
               Regístrate ahora para una prueba gratuita de 14 días, sin tarjeta de crédito.
             </p>
           </div>

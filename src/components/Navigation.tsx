@@ -55,13 +55,13 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav className="sticky top-0 z-50 w-full bg-therapy-blue text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-semibold text-therapy-navy">
-                terapIA
+              <span className="text-2xl font-semibold text-white">
+                JOY
               </span>
             </Link>
           </div>
@@ -70,25 +70,25 @@ export const Navigation = () => {
             <div className="flex items-center space-x-4">
               <Link
                 to="/"
-                className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:text-therapy-teal px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Inicio
               </Link>
               <Link
                 to="/features"
-                className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:text-therapy-teal px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Características
               </Link>
               <Link
                 to="/about"
-                className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:text-therapy-teal px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Nosotros
               </Link>
               <Link
                 to="/contact"
-                className="text-therapy-deep-purple hover:text-therapy-navy px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white hover:text-therapy-teal px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Contacto
               </Link>
@@ -97,14 +97,14 @@ export const Navigation = () => {
                 <>
                   <Button
                     variant="outline"
-                    className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream"
+                    className="border-therapy-teal text-therapy-teal hover:bg-therapy-teal hover:text-white"
                     onClick={handleLogout}
                   >
                     Cerrar Sesión
                   </Button>
                   <Link
                     to={user.role === "terapeuta" ? "/dashboard/terapeuta/pacientes" : "/dashboard/paciente"}
-                    className="bg-therapy-teal hover:bg-therapy-cyan text-white px-4 py-2 rounded-md text-sm font-medium"
+                    className="bg-therapy-purple hover:bg-therapy-orange text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Dashboard
                   </Link>
@@ -113,13 +113,13 @@ export const Navigation = () => {
                 <>
                   <Button
                     variant="outline"
-                    className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream"
+                    className="border-therapy-teal text-therapy-teal bg-white/10 hover:bg-therapy-teal hover:text-white transition-colors"
                     onClick={() => setIsLoginOpen(true)}
                   >
                     Iniciar Sesión
                   </Button>
                   <Button
-                    className="bg-therapy-teal hover:bg-therapy-cyan text-white"
+                    className="bg-therapy-purple hover:bg-therapy-orange text-white"
                     onClick={() => setIsRegisterOpen(true)}
                   >
                     Registrarse
@@ -132,7 +132,7 @@ export const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-md text-therapy-deep-purple hover:text-therapy-navy focus:outline-none"
+              className="p-2 rounded-md text-white hover:text-therapy-teal focus:outline-none transition-colors"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -147,31 +147,31 @@ export const Navigation = () => {
             : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-gray-200">
-          <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-therapy-blue border-b border-therapy-teal">
+          <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-therapy-teal hover:bg-therapy-blue/80 transition-colors">
             Inicio
           </Link>
-          <Link to="/features" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
+          <Link to="/features" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-therapy-teal hover:bg-therapy-blue/80 transition-colors">
             Características
           </Link>
-          <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
+          <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-therapy-teal hover:bg-therapy-blue/80 transition-colors">
             Nosotros
           </Link>
-          <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-therapy-deep-purple hover:text-therapy-navy hover:bg-therapy-light-cream">
+          <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-therapy-teal hover:bg-therapy-blue/80 transition-colors">
             Contacto
           </Link>
           {user ? (
             <>
               <Button
                 variant="outline"
-                className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream w-full justify-center"
+                className="border-therapy-teal text-therapy-teal hover:bg-therapy-teal hover:text-white w-full justify-center transition-colors"
                 onClick={handleLogout}
               >
                 Cerrar Sesión
               </Button>
               <Link
                 to={user.role === "terapeuta" ? "/dashboard/terapeuta/pacientes" : "/dashboard/paciente"}
-                className="block text-center bg-therapy-teal hover:bg-therapy-cyan text-white px-4 py-2 rounded-md text-sm font-medium"
+                className="block text-center bg-therapy-purple hover:bg-therapy-orange text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Dashboard
               </Link>
@@ -180,13 +180,13 @@ export const Navigation = () => {
             <div className="flex flex-col space-y-2 pt-2">
               <Button
                 variant="outline"
-                className="border-therapy-teal text-therapy-teal hover:bg-therapy-light-cream w-full justify-center"
+                className="border-therapy-teal text-therapy-teal bg-white/10 hover:bg-therapy-teal hover:text-white transition-colors"
                 onClick={() => setIsLoginOpen(true)}
               >
                 Iniciar Sesión
               </Button>
               <Button
-                className="bg-therapy-teal hover:bg-therapy-cyan text-white w-full justify-center"
+                className="bg-therapy-purple hover:bg-therapy-orange text-white w-full justify-center transition-colors"
                 onClick={() => setIsRegisterOpen(true)}
               >
                 Registrarse

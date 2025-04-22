@@ -52,12 +52,12 @@ export default function PatientLayout() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-30 w-full bg-therapy-yellow border-b border-therapy-blue">
+      <header className="sticky top-0 z-30 w-full bg-therapy-blue text-white">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-semibold text-therapy-blue">
-                terapIA
+              <Link to="/" className="text-2xl font-semibold text-white">
+                JOY
               </Link>
             </div>
 
@@ -68,11 +68,11 @@ export default function PatientLayout() {
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-purple",
+                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-teal",
                     location.pathname === link.path ||
                     (link.path.includes("sesiones") && location.pathname === "/dashboard/paciente")
-                      ? "text-therapy-teal"
-                      : "text-therapy-blue"
+                      ? "text-white"
+                      : "text-white/80"
                   )}
                 >
                   {link.icon}
@@ -184,7 +184,7 @@ export default function PatientLayout() {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6 bg-therapy-yellow">
+      <main className="flex-1 container mx-auto px-4 py-6 bg-white">
         <Outlet />
       </main>
 

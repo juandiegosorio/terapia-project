@@ -1,4 +1,3 @@
-
 import { CheckCircle } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -47,7 +46,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-therapy-dark-blue sm:text-4xl">
-            Cómo Funciona terapIA
+            Cómo Funciona JOY
           </h2>
           <p className="mt-4 text-lg text-therapy-deep-purple max-w-3xl mx-auto">
             Nuestro flujo de trabajo optimizado facilita la gestión de sesiones de terapia
@@ -111,7 +110,7 @@ const HowItWorksSection = () => {
 
         <div className="mt-20 bg-white rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-center text-therapy-dark-blue mb-8">
-            Beneficios de Usar terapIA
+            Beneficios de Usar JOY
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (

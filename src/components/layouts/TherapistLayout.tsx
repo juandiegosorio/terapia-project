@@ -58,12 +58,12 @@ const TherapistLayout = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-30 w-full bg-therapy-yellow border-b border-therapy-blue">
+      <header className="sticky top-0 z-30 w-full bg-therapy-blue text-white">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-semibold text-therapy-blue">
-                terapIA
+              <Link to="/" className="text-2xl font-semibold text-white">
+                JOY
               </Link>
             </div>
 
@@ -74,11 +74,11 @@ const TherapistLayout = () => {
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-purple",
+                    "flex items-center text-sm font-medium transition-colors hover:text-therapy-teal",
                     location.pathname === link.path || 
                     (link.path.includes("pacientes") && location.pathname === "/dashboard/terapeuta") 
-                      ? "text-therapy-teal" 
-                      : "text-therapy-blue"
+                      ? "text-white" 
+                      : "text-white/80"
                   )}
                 >
                   {link.icon}
@@ -154,7 +154,7 @@ const TherapistLayout = () => {
               : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-therapy-green border-b border-therapy-blue">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-gray-200">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -162,8 +162,8 @@ const TherapistLayout = () => {
                 className={cn(
                   "flex items-center px-3 py-2 rounded-md text-base font-medium",
                   location.pathname === link.path 
-                    ? "text-therapy-teal bg-therapy-yellow" 
-                    : "text-therapy-blue hover:text-therapy-purple hover:bg-therapy-yellow"
+                    ? "text-therapy-blue font-semibold" 
+                    : "text-gray-600 hover:text-therapy-blue"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -190,7 +190,7 @@ const TherapistLayout = () => {
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6 bg-therapy-yellow">
+      <main className="flex-1 container mx-auto px-4 py-6 bg-therapy-teal/10">
         <Outlet />
       </main>
 

@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -8,13 +7,12 @@ const About = () => {
       <Navigation />
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-therapy-navy">Acerca de terapIA</h1>
+          <h1 className="text-3xl font-bold mb-8 text-therapy-navy">Acerca de JOY</h1>
           
           <div className="space-y-6 text-therapy-deep-purple">
             <p>
-              terapIA fue fundada por un equipo de terapeutas y expertos en tecnología que reconocieron la necesidad de una 
-              plataforma segura e inteligente que pudiera mejorar el proceso terapéutico mientras mantenía los más altos 
-              estándares de privacidad y confidencialidad.
+              JOY fue fundada por un equipo de terapeutas y expertos en tecnología que reconocieron la necesidad de una 
+              plataforma moderna para la gestión de sesiones de terapia.
             </p>
             
             <p>
@@ -24,10 +22,8 @@ const About = () => {
             </p>
             
             <p>
-              Entendemos la confianza sagrada entre terapeuta y paciente. Por eso, terapIA ha sido diseñada con la 
-              seguridad y privacidad como principios fundamentales, no como reflexiones posteriores. Al aprovechar la 
-              infraestructura de seguridad de Google Drive e implementar estrictos controles de acceso, garantizamos 
-              que el contenido terapéutico sensible permanezca protegido.
+              Entendemos la confianza sagrada entre terapeuta y paciente. Por eso, JOY ha sido diseñada con la 
+              máxima seguridad y privacidad en mente.
             </p>
             
             <h2 className="text-2xl font-bold mt-10 mb-4 text-therapy-navy">Nuestros Valores</h2>

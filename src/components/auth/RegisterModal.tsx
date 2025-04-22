@@ -1,4 +1,3 @@
-
 import {
   Dialog,
   DialogContent,
@@ -40,7 +39,7 @@ export function RegisterModal({ isOpen, onClose, onRegister }: RegisterModalProp
         <DialogHeader className="text-therapy-blue">
           <DialogTitle>Crear Cuenta</DialogTitle>
           <DialogDescription className="text-therapy-blue/80">
-            Registra una nueva cuenta en terapIA
+            Registra una nueva cuenta en JOY
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">

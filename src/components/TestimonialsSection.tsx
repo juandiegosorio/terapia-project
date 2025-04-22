@@ -1,11 +1,10 @@
-
 import { Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    content: "terapIA ha transformado mi práctica. Los análisis de IA me ayudan a identificar patrones que podría haber pasado por alto, y mis pacientes aprecian tener acceso a las grabaciones de sus sesiones.",
-    author: "Dra. Sara Jiménez",
+    content: "JOY ha transformado mi práctica. Los análisis de IA me ayudan a identificar patrones que podría haber pasado por alto, y mis pacientes aprecian tener acceso a las grabaciones de sus sesiones.",
+    author: "Dra. María García",
     title: "Psicóloga Clínica",
     image: "/placeholder.svg"
   },
@@ -28,8 +27,8 @@ const TestimonialsSection = () => {
     <section className="py-16 bg-gradient-to-br from-therapy-blue via-therapy-teal to-therapy-purple text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Confiado por Terapeutas
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Mira lo que los profesionales están diciendo sobre JOY
           </h2>
           <p className="mt-4 text-lg opacity-90 max-w-3xl mx-auto">
             Mira lo que los profesionales están diciendo sobre terapIA

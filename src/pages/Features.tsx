@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
@@ -46,7 +45,7 @@ const Features = () => {
                 Características Completas para Terapia Moderna
               </h1>
               <p className="text-xl text-therapy-deep-purple">
-                terapIA proporciona todo lo que necesitas para gestionar sesiones de terapia de manera efectiva,
+                JOY proporciona todo lo que necesitas para gestionar sesiones de terapia de manera efectiva,
                 desde grabación segura hasta análisis impulsados por IA.
               </p>
             </div>
